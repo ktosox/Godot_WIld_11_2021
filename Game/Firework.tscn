@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Firework.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.664596 )
+colors = PoolColorArray( 1, 1, 1, 1, 0.779297, 0.779297, 0.779297, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.36
+emission_shape = 1
+emission_sphere_radius = 2.0
+flag_align_y = true
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 52.0
+initial_velocity_random = 0.28
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 5.0
+damping = 10.0
+scale = 3.0
+scale_random = 0.38
+color_ramp = SubResource( 2 )
+hue_variation = -0.06
+hue_variation_random = 0.61
+
+[node name="Firework" type="Particles2D"]
+position = Vector2( 390, 118 )
+emitting = false
+amount = 150
+lifetime = 3.0
+explosiveness = 0.92
+process_material = SubResource( 3 )
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
