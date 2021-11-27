@@ -23,10 +23,8 @@ bbcode_text = "CREDITS:
 Chicken Inversion is a game made by Ktosox for the Godot Wild Jam for November 2021
 all of the art used comes from a tilest made by V3X3D named \"Retro Lines\""
 text = "CREDITS:
-Chicken Inversion is a game made by Ktosox for the 
-					November 2021 Godot Wild Jam for 
-all of the art assets come from a tilest 
-					made by V3X3D named \"Retro Lines\""
+Chicken Inversion is a game made by Ktosox for the Godot Wild Jam for November 2021
+All of the art used comes from a tilest made by V3X3D named \"Retro Lines\""
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
