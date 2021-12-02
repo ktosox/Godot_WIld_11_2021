@@ -44,6 +44,7 @@ contacts_reported = 2
 contact_monitor = true
 linear_velocity = Vector2( -35, 0 )
 linear_damp = 0.0
+angular_damp = 100.0
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -51,7 +52,7 @@ shape = SubResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-frame = 1
+frame = 2
 playing = true
 
 [connection signal="body_entered" from="." to="." method="_on_BeeBoy_body_entered"]
